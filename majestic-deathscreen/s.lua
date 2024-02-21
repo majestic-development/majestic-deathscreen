@@ -3,7 +3,6 @@ AddEventHandler('qb-playerDied', function(weaponLabel, time)
 end)
 
 -- Inside your server-side script
-
 -- Function to open the death screen
 function OpenDeathScreen(time)
     TriggerClientEvent('majestic-deathscreen:openUI', -1, time) -- -1 sends the event to all clients
