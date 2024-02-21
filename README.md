@@ -1,4 +1,4 @@
-# 5️⃣ five-idcard
+# 💀 majestic-deathscreen
 FiveM QBCore NoPixel 4.0 inspired deathscreen, fully react js!
 
 ## 👀 Preview
