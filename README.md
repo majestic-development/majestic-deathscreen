@@ -1,5 +1,5 @@
 # 💀 majestic-deathscreen
-FiveM QBCore NoPixel 4.0 inspired deathscreen, fully react js!
+FiveM Standalone NoPixel 4.0 inspired deathscreen, fully react js!
 
 ## 👀 Preview
 ![image](https://github.com/majestic-development/majestic-deathscreen/assets/154363410/5e77384a-110f-4da4-813e-fe736ae2b127)
