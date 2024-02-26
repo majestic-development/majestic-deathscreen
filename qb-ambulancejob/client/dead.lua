@@ -132,8 +132,8 @@ CreateThread(function()
             local ped = PlayerPedId()
             -- DisableAllControlActions(0)
             -- EnableControlAction(0, 1, true)
-			-- EnableControlAction(0, 2, true)
-			-- EnableControlAction(0, 245, true)
+	    -- EnableControlAction(0, 2, true)
+	    -- EnableControlAction(0, 245, true)
             -- EnableControlAction(0, 38, true)
             -- EnableControlAction(0, 0, true)
             -- EnableControlAction(0, 322, true)
@@ -146,9 +146,9 @@ CreateThread(function()
             if isDead then
                 if not isInHospitalBed then
                     if deathTime > 0 then
-                        DrawTxt(0.93, 1.44, 1.0,1.0,0.6, Lang:t('info.respawn_txt', {deathtime = math.ceil(deathTime)}), 255, 255, 255, 255)
+                        --DrawTxt(0.93, 1.44, 1.0,1.0,0.6, Lang:t('info.respawn_txt', {deathtime = math.ceil(deathTime)}), 255, 255, 255, 255)
                     else
-                        DrawTxt(0.865, 1.44, 1.0, 1.0, 0.6, Lang:t('info.respawn_revive', {holdtime = hold, cost = Config.BillCost}), 255, 255, 255, 255)
+                        --DrawTxt(0.865, 1.44, 1.0, 1.0, 0.6, Lang:t('info.respawn_revive', {holdtime = hold, cost = Config.BillCost}), 255, 255, 255, 255)
                     end
                 end
 
@@ -182,9 +182,9 @@ CreateThread(function()
                   --  DrawTxt(0.845, 1.44, 1.0, 1.0, 0.6, Lang:t('info.bleed_out_help', {time = math.ceil(LaststandTime)}), 255, 255, 255, 255)
                     TriggerEvent('majestic-deathscreen:die',LaststandTime)
                     if not emsNotified then
-                        DrawTxt(0.91, 1.40, 1.0, 1.0, 0.6, Lang:t('info.request_help'), 255, 255, 255, 255)
+                        --DrawTxt(0.91, 1.40, 1.0, 1.0, 0.6, Lang:t('info.request_help'), 255, 255, 255, 255)
                     else
-                        DrawTxt(0.90, 1.40, 1.0, 1.0, 0.6, Lang:t('info.help_requested'), 255, 255, 255, 255)
+                       -- DrawTxt(0.90, 1.40, 1.0, 1.0, 0.6, Lang:t('info.help_requested'), 255, 255, 255, 255)
                     end
 
                     if IsControlJustPressed(0, 47) and not emsNotified then
