@@ -1,4 +1,4 @@
-Replace inside dead.lua (qb-ambulancejob > client > dead.lua) once done go to the buttom of this text and do the rest.
+## 1. Replace inside dead.lua (qb-ambulancejob > client > dead.lua) once done go to the buttom of this text and do the rest.
 
 emsNotified = false
 
@@ -55,10 +55,10 @@ CreateThread(function()
 
                 if LaststandTime > Config.MinimumRevive then
                   --  DrawTxt(0.94, 1.44, 1.0, 1.0, 0.6, Lang:t('info.bleed_out', {time = math.ceil(LaststandTime)}), 255, 255, 255, 255)
-                    TriggerEvent('majestic-deathscreen:die', LaststandTime)
+                    TriggerEvent('meteo-deathscreen:die',LaststandTime)
                 else
                   --  DrawTxt(0.845, 1.44, 1.0, 1.0, 0.6, Lang:t('info.bleed_out_help', {time = math.ceil(LaststandTime)}), 255, 255, 255, 255)
-                    TriggerEvent('majestic-deathscreen:die', LaststandTime)
+                    TriggerEvent('meteo-deathscreen:die',LaststandTime)
                     if not emsNotified then
                         DrawTxt(0.91, 1.40, 1.0, 1.0, 0.6, Lang:t('info.request_help'), 255, 255, 255, 255)
                     else
@@ -103,8 +103,7 @@ CreateThread(function()
 end)
 
 
-
-THEN CONTINUE TO qb-ambulancejob - client - main.lua and replace these two
+## THEN CONTINUE TO qb-ambulancejob - client - main.lua and replace these two
 
 1. search for RegisterNetEvent('hospital:client:Revive, function() and replace this event with the one below
 
@@ -142,7 +141,7 @@ RegisterNetEvent('hospital:client:Revive', function()
 end)
 
 
-2. look for RegisterNetEvent('hospital:client:RespawnAtHospital', function() and replace that whole event with the one below
+## 2. look for RegisterNetEvent('hospital:client:RespawnAtHospital', function() and replace that whole event with the one below
 
 RegisterNetEvent('hospital:client:RespawnAtHospital', function()
     TriggerEvent('majestic-deathscreen:revive')
