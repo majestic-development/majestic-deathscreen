@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    display: none;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    user-select: none;
+    background: linear-gradient(179deg, rgba(0, 0, 0, 0.50) 38.54%, rgba(0, 0, 0, 1) 99.24%);
+    font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 1px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: transparent;
+    border-radius: 1px;
+}
+
+#mainDiv {
+    width: 30%;
+    height: 33%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: red; */
+}
+
+#MDCountdown {
+    width: 50%;
+    height: 18%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* background-color: red; */
+}
+
+.MDCDiv {
+    width: 15%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(180deg, #262626 0%, #1D1D1D 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(192, 192, 192);
+    font-size: 20px;
+    overflow: hidden;
+}
