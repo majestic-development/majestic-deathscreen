@@ -1,22 +1,13 @@
 local isDead = false
+
 RegisterNetEvent('majestic-deathscreen:openUI', function(time)
     isDead = true
     SendNUIMessage({action = "DSMenu", open = true, time = time})
     if Config.Blur then
         TriggerScreenblurFadeIn()
     end
+    handleControls(false)
     disableSounds()
-    while isDead do
-        Citizen.Wait(0)
-        DisableAllControlActions(0)
-        if Config.Controls.Mouse == true then
-            EnableControlAction(0, 1, true)
-            EnableControlAction(0, 2, true)
-        end
-        for k, v in pairs(Config.Controls.Enable) do
-            EnableControlAction(0, v, true)
-        end
-    end
 end)
 
 RegisterNetEvent('majestic-deathscreen:revive', function()
@@ -34,21 +25,9 @@ RegisterNetEvent('majestic-deathscreen:die', function(time)
     if Config.Blur then
         TriggerScreenblurFadeIn()
     end
+    handleControls(false)
     disableSounds()
-    while isDead do
-        Citizen.Wait(0)
-        DisableAllControlActions(0)
-        if Config.Controls.Mouse == true then
-            EnableControlAction(0, 1, true)
-            EnableControlAction(0, 2, true)
-        end
-        for k, v in pairs(Config.Controls.Enable) do
-            EnableControlAction(0, v, true)
-        end
-    end
 end)
-
-
 
 RegisterNetEvent('majestic-deathscreen:res', function()
     SendNUIMessage({action = "res"})
@@ -61,6 +40,17 @@ end)
 RegisterCommand('test',function()
     TriggerEvent('majestic-deathscreen:updateRes', 0)
 end)
+
+function handleControls(disable)
+    DisableAllControlActions(0)
+    if Config.Controls.Mouse then
+        EnableControlAction(0, 1, not disable)
+        EnableControlAction(0, 2, not disable)
+    end
+    for k, v in pairs(Config.Controls.Enable) do
+        EnableControlAction(0, v, not disable)
+    end
+end
 
 function disableSounds()
     StartAudioScene("DLC_MPHEIST_TRANSITION_TO_APT_FADE_IN_RADIO_SCENE")
